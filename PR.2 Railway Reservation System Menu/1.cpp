@@ -30,7 +30,7 @@ public:
     }
 
     void displayTrainDetails() 
-	{
+    {
         cout << "\nTrain Number: "<<trainNumber;
         cout << "\nTrain Name: "<<trainName;
         cout << "\nSource: "<<source;
@@ -75,7 +75,7 @@ public:
         for (int i=0; i<totalTrains; i++) 
 		{
             if (trains[i].trainNumber==number) 
-			{
+		{
                 cout << "\nTrain found:\n";
                 trains[i].displayTrainDetails();
             }
