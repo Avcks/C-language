@@ -1,8 +1,7 @@
 #include <iostream>
-#include <string.h> // For strcmp
+#include <string.h>
 using namespace std;
 
-// Class for multiple inheritance (Flyingcar will use this)
 class Aircraft 
 {
 public:
@@ -13,7 +12,6 @@ public:
     }
 };
 
-// Base class for all vehicles
 class Vehicle 
 {
 public:
@@ -32,7 +30,7 @@ public:
         cout << "Enter Vehicle ID: ";
         cin >> vehicleID;
         cout << "Enter Manufacturer: ";
-        cin >> manufacturer; // Note: This won't accept spaces
+        cin >> manufacturer;
         cout << "Enter Model: ";
         cin >> model;
         cout << "Enter Year: ";
@@ -48,7 +46,6 @@ public:
     }
 };
 
-// Single inheritance: Car inherits from Vehicle
 class Car : public Vehicle 
 {
 public:
@@ -60,7 +57,6 @@ public:
     }
 };
 
-// Multilevel inheritance: Electriccar inherits from Car
 class Electriccar : public Car 
 {
 public:
@@ -86,7 +82,6 @@ public:
     }
 };
 
-// Multiple inheritance: Flyingcar inherits from Car and Aircraft
 class Flyingcar : public Car, public Aircraft 
 {
 public:
@@ -105,7 +100,6 @@ public:
     }
 };
 
-// Hierarchical inheritance: Sportscar inherits from Car
 class Sportscar : public Car 
 {
 public:
@@ -130,7 +124,6 @@ public:
     }
 };
 
-// Hierarchical inheritance: Sedan inherits from Car
 class Sedan : public Car 
 {
 public:
@@ -142,7 +135,6 @@ public:
     }
 };
 
-// Hierarchical inheritance: SUV inherits from Car (same as Sedan)
 class SUV : public Car 
 {
 public:
@@ -154,7 +146,6 @@ public:
     }
 };
 
-// Class to manage all vehicles
 class Vehiclesystem 
 {
 public:
@@ -163,13 +154,13 @@ public:
     Flyingcar flyingCars[100];
     Sportscar sportsCars[100];
     Sedan sedans[100];
-    SUV suvs[100]; // Added array for SUVs
+    SUV suvs[100];
     int totalcars;
     int totalelectriccars;
     int totalflyingcars;
     int totalsportscars;
     int totalsedans;
-    int totalsuvs; // Added counter for SUVs
+    int totalsuvs;
 
     Vehiclesystem() 
     {
@@ -178,13 +169,13 @@ public:
         totalflyingcars = 0;
         totalsportscars = 0;
         totalsedans = 0;
-        totalsuvs = 0; // Initialize counter for SUVs
+        totalsuvs = 0;
     }
 
     void add() 
     {
         int type;
-        cout << "Vehicle Type (1-Car, 2-Electric Car, 3-Flying Car, 4-Sports Car, 5-Sedan, 6-SUV): "; // Added SUV option
+        cout << "Vehicle Type (1-Car, 2-Electric Car, 3-Flying Car, 4-Sports Car, 5-Sedan, 6-SUV): ";
         cin >> type;
 
         if (type == 1 && totalcars < 100) 
@@ -212,7 +203,7 @@ public:
             sedans[totalsedans].vehicledetails();
             totalsedans++;
         } 
-        else if (type == 6 && totalsuvs < 100) // Added case for SUV
+        else if (type == 6 && totalsuvs < 100)
         {
             suvs[totalsuvs].vehicledetails();
             totalsuvs++;
@@ -256,7 +247,7 @@ public:
                 cout << "\nVehicle " << (i + 1 + totalcars + totalelectriccars + totalflyingcars + totalsportscars) << ":";
                 sedans[i].display();
             }
-            for (int i = 0; i < totalsuvs; i++) // Added loop for SUVs
+            for (int i = 0; i < totalsuvs; i++)
             {
                 cout << "\nVehicle " << (i + 1 + totalcars + totalelectriccars + totalflyingcars + totalsportscars + totalsedans) << ":";
                 suvs[i].display();
@@ -306,7 +297,7 @@ public:
                 sedans[i].display();
             }
         }
-        for (int i = 0; i < totalsuvs; i++) // Added loop for SUVs
+        for (int i = 0; i < totalsuvs; i++)
         {
             if (strcmp(suvs[i].vehicleID, id) == 0) 
             {
