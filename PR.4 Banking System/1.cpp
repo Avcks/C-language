@@ -131,10 +131,6 @@ int main()
     int numac = 0;
     int choice = 0;
 
-    cout<<"===============================================\n";
-    cout<<"     Welcome to the Bank Account Manager       \n";
-    cout<<"===============================================\n";
-
     while (choice!=7) 
     {
         cout<<"\n--- Main Menu ---\n";
@@ -301,9 +297,6 @@ int main()
     }
 }
 /*
-===============================================
-     Welcome to the Bank Account Manager
-===============================================
 
 --- Main Menu ---
 1. Add New Account
