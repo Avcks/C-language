@@ -376,4 +376,113 @@ int main()
     };
 }
 /*
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 1
+Enter book title: c and c++
+Enter author: harshil
+Enter ISBN: 1234567890
+Enter quantity: 1234
+Item added successfully.
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 2
+Enter DVD title: c
+Enter director: aum
+Enter duration (minutes): 1234
+Item added successfully.
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 3
+Enter magazine title: c++
+Enter publisher: aum
+Enter issue number: 1234567890
+Item added successfully.
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 4
+
+Library Catalog:
+Type: Book
+Title: c and c++
+Author: harshil
+ISBN: 1234567890
+Available Quantity: 1234
+Status: Not checked out
+-----------------------
+Type: DVD
+Title: c
+Director: aum
+Duration: 1234 minutes
+Status: Not checked out
+-----------------------
+Type: Magazine
+Title: c++
+Publisher: aum
+Issue Number: 1234567890
+Status: Not checked out
+-----------------------
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 5
+Enter item index (0-2): 2
+Magazine checked out successfully.
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 6
+Enter item index (0-2): 1
+DVD returned successfully.
+
+Library Management System
+1. Add Book
+2. Add DVD
+3. Add Magazine
+4. Display All Items
+5. Check Out Item
+6. Return Item
+7. Exit
+Enter your choice: 7
+
+Exiting program.
 */
